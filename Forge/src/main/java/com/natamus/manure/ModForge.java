@@ -1,39 +1,26 @@
 package com.natamus.manure;
 
 import com.natamus.collective.check.RegisterMod;
-import com.natamus.manure.dispenser.RecipeManager;
 import com.natamus.manure.forge.config.IntegrateForgeConfig;
 import com.natamus.manure.forge.events.ForgeManureDropEvent;
-import com.natamus.manure.items.ManureItems;
 import com.natamus.manure.util.Reference;
-import net.minecraft.world.item.BoneMealItem;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.Item;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLLoadCompleteEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.RegistryObject;
 
 @Mod(Reference.MOD_ID)
 public class ModForge {
 
-	public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Reference.MOD_ID);
-
-	public static final RegistryObject<Item> MANURE_ITEM_OBJECT = ITEMS.register("manure", () -> new BoneMealItem((new Item.Properties().tab(CreativeModeTab.TAB_MATERIALS))));
-	
 	public ModForge() {
 		IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 		modEventBus.addListener(this::loadComplete);
 
-		ITEMS.register(modEventBus);
-
 		setGlobalConstants();
 		ModCommon.init();
+		ModCommon.registerAssets(modEventBus);
 
 		IntegrateForgeConfig.registerScreen(ModLoadingContext.get());
 
@@ -41,11 +28,9 @@ public class ModForge {
 	}
 
 	private void loadComplete(final FMLLoadCompleteEvent event) {
-		ManureItems.MANURE = MANURE_ITEM_OBJECT.get();
-
-		RecipeManager.initDispenserBehavior();
-
 		MinecraftForge.EVENT_BUS.register(new ForgeManureDropEvent());
+
+		ModCommon.setAssets();
 	}
 
 	private static void setGlobalConstants() {
