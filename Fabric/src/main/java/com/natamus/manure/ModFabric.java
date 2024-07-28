@@ -1,6 +1,7 @@
 package com.natamus.manure;
 
 import com.natamus.collective.check.RegisterMod;
+import com.natamus.collective.check.ShouldLoadCheck;
 import com.natamus.manure.events.ManureDropEvent;
 import com.natamus.manure.util.Reference;
 import com.natamus.manure.util.Util;
@@ -16,6 +17,10 @@ public class ModFabric implements ModInitializer {
 	
 	@Override
 	public void onInitialize() {
+		if (!ShouldLoadCheck.shouldLoad(Reference.MOD_ID)) {
+			return;
+		}
+
 		setGlobalConstants();
 		ModCommon.init();
 		ModCommon.registerAssets(null);
