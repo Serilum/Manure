@@ -1,6 +1,7 @@
 package com.natamus.manure;
 
 import com.natamus.collective.check.RegisterMod;
+import com.natamus.collective.check.ShouldLoadCheck;
 import com.natamus.manure.neoforge.config.IntegrateNeoForgeConfig;
 import com.natamus.manure.neoforge.events.NeoForgeManureDropEvent;
 import com.natamus.manure.util.Reference;
@@ -14,6 +15,10 @@ import net.neoforged.neoforge.common.NeoForge;
 public class ModNeoForge {
 
 	public ModNeoForge(IEventBus modEventBus) {
+		if (!ShouldLoadCheck.shouldLoad(Reference.MOD_ID)) {
+			return;
+		}
+
 		modEventBus.addListener(this::loadComplete);
 
 		setGlobalConstants();
