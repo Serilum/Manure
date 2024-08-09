@@ -1,0 +1,34 @@
+modLoader="javafml"
+loaderVersion="*"
+license="All rights reserved"
+issueTrackerURL="https://github.com/Serilum/.issue-tracker/labels/Mod:%20Manure"
+logoFile="icon.png"
+
+[[mods]]
+modId="manure"
+version="3.6"
+displayName="Manure"
+displayURL="https://serilum.com/mod/manure"
+authors="Rick South"
+description='''Animals periodically drop manure, by default twice a day. Can be used as a bone meal substitute.
+'''
+credits='''Thank you very much to my Membership sponsors for supporting the development of this mod:  
+
+Alister, Andrean Olgo, aternosorg, Cherriesaurus, Michael W. S., Nahuel Fernandez, Shana Gitnick, Tyler Behl   
+
+If you would like to contribute too, check out https://serilum.com/donate. Appreciate it! <3   
+'''
+
+[[dependencies.manure]]
+    modId="collective"
+    mandatory=true
+    versionRange="[7.80,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.manure]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.21,1.21.1]"
+    ordering="NONE"
+    side="BOTH"
