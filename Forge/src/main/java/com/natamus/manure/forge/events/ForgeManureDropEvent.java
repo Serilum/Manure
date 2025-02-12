@@ -10,12 +10,10 @@ import net.minecraftforge.event.entity.EntityJoinLevelEvent;
 import net.minecraftforge.event.entity.EntityLeaveLevelEvent;
 import net.minecraftforge.event.level.LevelEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 
-@EventBusSubscriber
 public class ForgeManureDropEvent {
     @SubscribeEvent
-    public void onWorldLoad(LevelEvent.Load e) {
+    public static void onWorldLoad(LevelEvent.Load e) {
         Level level = WorldFunctions.getWorldIfInstanceOfAndNotRemote(e.getLevel());
         if (level == null) {
             return;
@@ -25,7 +23,7 @@ public class ForgeManureDropEvent {
     }
 
     @SubscribeEvent
-    public void onServerTick(TickEvent.ServerTickEvent e) {
+    public static void onServerTick(TickEvent.ServerTickEvent e) {
         if (!e.phase.equals(TickEvent.Phase.END)) {
             return;
         }
@@ -34,7 +32,7 @@ public class ForgeManureDropEvent {
     }
 
     @SubscribeEvent
-    public void onEntityJoin(EntityJoinLevelEvent e) {
+    public static void onEntityJoin(EntityJoinLevelEvent e) {
         Level level = e.getLevel();
         if (level.isClientSide) {
             return;
@@ -44,7 +42,7 @@ public class ForgeManureDropEvent {
     }
 
     @SubscribeEvent
-    public void onEntityLeave(EntityLeaveLevelEvent e) {
+    public static void onEntityLeave(EntityLeaveLevelEvent e) {
         Level level = e.getLevel();
         if (level.isClientSide) {
             return;
