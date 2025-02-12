@@ -33,7 +33,7 @@ public class ModForge {
 	}
 
 	private void loadComplete(final FMLLoadCompleteEvent event) {
-		MinecraftForge.EVENT_BUS.register(new ForgeManureDropEvent());
+		MinecraftForge.EVENT_BUS.register(ForgeManureDropEvent.class);
 
 		ModCommon.setAssets();
 	}
