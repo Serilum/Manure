@@ -12,17 +12,17 @@
 <p style="text-align:center"><a href="https://curseforge.com/members/serilum/projects" target="_blank" rel="nofollow"><img src="https://workflow.serilum.com/badges/svg/curseforge.svg" width="200"></a> <a href="https://modrinth.com/user/Serilum" target="_blank" rel="nofollow"><img src="https://workflow.serilum.com/badges/svg/modrinth.svg" width="200"></a> <a href="https://patreon.com/serilum" target="_blank" rel="nofollow"><img src="https://workflow.serilum.com/badges/svg/patreon.svg" width="200"></a> <a href="https://youtube.com/@serilum" target="_blank" rel="nofollow"><img src="https://workflow.serilum.com/badges/svg/youtube.svg" width="200"></a></p>
 <p><strong><span style="font-size:24px">Requires the library mod&nbsp;<a style="font-size:24px" href="https://curseforge.com/minecraft/mc-mods/collective" target="_blank" rel="nofollow">Collective</a>.</span></strong><br><br><span style="font-size:18px">Manure makes animals periodically drop the manure item. By default this is done twice a day, but this is configurable. Manure can be used as a substitute for bone meal, to generate grass/flowers or to speed up crop growth. Can also be used from a dispenser. Works for any modded entity that extends the Animal class.<br></span><br><br><strong><span style="font-size:20px">Configurable:</span> <span style="color:#008000;font-size:14px"><a style="color:#008000" href="https://github.com/Serilum/.information/wiki/how-to-configure-mods" rel="nofollow">(&nbsp;how do I configure?&nbsp;)</a></span><br></strong><span style="font-size:12px"><strong>manureDropDelayTicks</strong>&nbsp;(default = 12000, min 0, max 10000000): How long the delay in ticks is in between loaded animals dropping manure. 20 ticks = 1 second. By default twice a day, every 12000 ticks.</span></p>
 <p><br><br><span style="font-size:20px"><strong>Blacklist:</strong></span></p>
-<div class="spoiler">
+<details><summary>Show Spoiler</summary>
 <p><span style="font-size:14px">The mod generates a blacklist on first load, located at <em><strong>./config/manure/blacklist.txt</strong></em>.<br></span><br><picture><img src="https://cdn.serilum.com/projects/manure/e.png"></picture><span style="font-size:14px">Here you can disable certain animals from dropping manure <strong>by adding an exclamation mark ( ! ) in front of the names.</strong><br>By default, axolotls, bees and frogs are disabled.<br></span><br><picture><img src="https://cdn.serilum.com/projects/manure/f.png"></picture></p>
-</div>
+</details>
 <p>&nbsp;</p>
 <p><br><br><span style="font-size:18px"><strong>A cow dropping manure:</strong></span></p>
-<div class="spoiler">
+<details><summary>Show Spoiler</summary>
 <p><picture><img src="https://cdn.serilum.com/projects/manure/b.webp"></picture></p>
-</div>
+</details>
 <p>&nbsp;</p>
 <p><br><span style="font-size:18px"><strong>Dispensing manure:</strong></span></p>
-<div class="spoiler">
+<details><summary>Show Spoiler</summary>
 <p><picture><img src="https://cdn.serilum.com/projects/manure/c.webp"></picture></p>
-</div>
+</details>
 <p>&nbsp;<br><br>------------------<br><br><span style="font-size:24px"><strong>You may freely use this mod in any modpack, as long as the download remains hosted within the CurseForge or Modrinth ecosystem.</strong></span><br><br><span style="font-size:18px"><a style="font-size:18px;color:#008000" href="https://serilum.com/" rel="nofollow">Serilum.com</a> contains an overview and more information on all mods available.</span><br><br><span style="font-size:14px">Comments are disabled as I'm unable to keep track of all the separate pages on each mod.</span><span style="font-size:14px"><br>For issues, ideas, suggestions or anything else there is the&nbsp;<a style="font-size:14px;color:#008000" href="https://github.com/Serilum/.issue-tracker" rel="nofollow">Github repo</a>. Thanks!</span><span style="font-size:6px"><br><br></span></p>
