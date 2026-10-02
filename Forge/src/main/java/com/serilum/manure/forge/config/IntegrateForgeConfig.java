@@ -1,7 +1,7 @@
-package com.natamus.manure.forge.config;
+package com.serilum.manure.forge.config;
 
 import com.natamus.collective.config.DuskConfig;
-import com.natamus.manure.util.Reference;
+import com.serilum.manure.util.Reference;
 import net.minecraftforge.client.ConfigScreenHandler;
 import net.minecraftforge.fml.ModLoadingContext;
 

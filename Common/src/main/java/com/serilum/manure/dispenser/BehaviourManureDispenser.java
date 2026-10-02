@@ -1,4 +1,4 @@
-package com.natamus.manure.dispenser;
+package com.serilum.manure.dispenser;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.BlockSource;

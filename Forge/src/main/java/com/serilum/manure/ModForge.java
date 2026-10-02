@@ -1,10 +1,10 @@
-package com.natamus.manure;
+package com.serilum.manure;
 
 import com.natamus.collective.check.RegisterMod;
 import com.natamus.collective.check.ShouldLoadCheck;
-import com.natamus.manure.forge.config.IntegrateForgeConfig;
-import com.natamus.manure.forge.events.ForgeManureDropEvent;
-import com.natamus.manure.util.Reference;
+import com.serilum.manure.forge.config.IntegrateForgeConfig;
+import com.serilum.manure.forge.events.ForgeManureDropEvent;
+import com.serilum.manure.util.Reference;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModLoadingContext;

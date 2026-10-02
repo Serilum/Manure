@@ -1,7 +1,7 @@
-package com.natamus.manure.config;
+package com.serilum.manure.config;
 
 import com.natamus.collective.config.DuskConfig;
-import com.natamus.manure.util.Reference;
+import com.serilum.manure.util.Reference;
 
 import java.util.Arrays;
 import java.util.HashMap;

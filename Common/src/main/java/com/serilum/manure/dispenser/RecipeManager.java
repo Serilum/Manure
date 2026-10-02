@@ -1,6 +1,6 @@
-package com.natamus.manure.dispenser;
+package com.serilum.manure.dispenser;
 
-import com.natamus.manure.items.ManureItems;
+import com.serilum.manure.items.ManureItems;
 import net.minecraft.world.level.block.DispenserBlock;
 
 public class RecipeManager {

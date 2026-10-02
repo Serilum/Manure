@@ -1,8 +1,8 @@
-package com.natamus.manure.events;
+package com.serilum.manure.events;
 
-import com.natamus.manure.config.ConfigHandler;
-import com.natamus.manure.items.ManureItems;
-import com.natamus.manure.util.Util;
+import com.serilum.manure.config.ConfigHandler;
+import com.serilum.manure.items.ManureItems;
+import com.serilum.manure.util.Util;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.Entity;

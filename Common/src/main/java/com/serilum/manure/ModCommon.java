@@ -1,11 +1,11 @@
-package com.natamus.manure;
+package com.serilum.manure;
 
 import com.natamus.collective.functions.CreativeModeTabFunctions;
 import com.natamus.collective.services.Services;
-import com.natamus.manure.config.ConfigHandler;
-import com.natamus.manure.dispenser.RecipeManager;
-import com.natamus.manure.items.ManureItems;
-import com.natamus.manure.util.Reference;
+import com.serilum.manure.config.ConfigHandler;
+import com.serilum.manure.dispenser.RecipeManager;
+import com.serilum.manure.items.ManureItems;
+import com.serilum.manure.util.Reference;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BoneMealItem;
 import net.minecraft.world.item.Item;

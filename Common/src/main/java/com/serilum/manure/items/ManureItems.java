@@ -1,4 +1,4 @@
-package com.natamus.manure.items;
+package com.serilum.manure.items;
 
 import net.minecraft.world.item.Item;
 

@@ -1,10 +1,10 @@
-package com.natamus.manure;
+package com.serilum.manure;
 
 import com.natamus.collective.check.RegisterMod;
 import com.natamus.collective.check.ShouldLoadCheck;
-import com.natamus.manure.events.ManureDropEvent;
-import com.natamus.manure.util.Reference;
-import com.natamus.manure.util.Util;
+import com.serilum.manure.events.ManureDropEvent;
+import com.serilum.manure.util.Reference;
+import com.serilum.manure.util.Util;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerEntityEvents;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;

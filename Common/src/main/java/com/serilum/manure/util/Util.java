@@ -1,7 +1,7 @@
-package com.natamus.manure.util;
+package com.serilum.manure.util;
 
 import com.natamus.collective.functions.DataFunctions;
-import com.natamus.manure.data.Variables;
+import com.serilum.manure.data.Variables;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
