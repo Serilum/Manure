@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
   "id": "manure",
-  "version": "4.0",
+  "version": "4.1",
 
   "name": "Manure",
   "description": "Animals periodically drop manure, by default twice a day. Can be used as a bone meal substitute.",
-  "authors": [ "Rick South" ],
+  "authors": [ "Serilum" ],
   "contact": {
     "homepage": "https://serilum.com/mod/manure",
     "sources": "https://github.com/Serilum/Manure",
@@ -16,14 +16,14 @@
   "icon": "icon.png",
 
   "environment": "*",
-  "entrypoints": { "main": [ "com.natamus.manure.ModFabric" ], "modmenu": [ "com.natamus.manure.fabric.config.IntegrateModMenu" ] },
+  "entrypoints": { "main": [ "com.serilum.manure.ModFabric" ], "modmenu": [ "com.serilum.manure.fabric.config.IntegrateModMenu" ] },
 
   "depends": {
     "fabricloader": ">=0.18.0",
     "fabric-api": "*",
     "minecraft": ">=26.3",
     "java": ">=25",
-    "collective": ">=8.39"
+    "collective": ">=8.40"
   },
 
   "custom": {
@@ -38,7 +38,7 @@
 	  " ",
 	  "Thank you very much to my Membership sponsors for supporting the development of this mod!",
 	  " ",
-	  "If you would like to contribute too, check out https://serilum.com/donate.",
+	  "If you would like to contribute too, check out https://serilum.com/donate",
 	  " ",
 	  "Membership sponsors:",
 	  " Andrean Olgo",
