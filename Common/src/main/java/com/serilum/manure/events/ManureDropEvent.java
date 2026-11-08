@@ -25,6 +25,9 @@ public class ManureDropEvent {
 				loadedAnimals.remove(animal);
 				continue;
 			}
+			if (Util.isBlacklistedAnimal(animal)) {
+				continue;
+			}
 
 			animal.level().addFreshEntity(new ItemEntity(animal.level(), animal.getX(), animal.getY()+0.5, animal.getZ(), new ItemStack(ManureItems.MANURE, 1)));
 		}
