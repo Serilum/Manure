@@ -6,6 +6,7 @@ import com.serilum.manure.config.ConfigHandler;
 import com.serilum.manure.dispenser.RecipeManager;
 import com.serilum.manure.items.ManureItems;
 import com.serilum.manure.util.Reference;
+import com.serilum.manure.util.Util;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BoneMealItem;
 import net.minecraft.world.item.Item;
@@ -18,7 +19,7 @@ public class ModCommon {
 	}
 
 	private static void load() {
-
+		Util.moveBlacklistFileIntoConfig();
 	}
 
 	public static void registerAssets(Object modEventBusObject) {
