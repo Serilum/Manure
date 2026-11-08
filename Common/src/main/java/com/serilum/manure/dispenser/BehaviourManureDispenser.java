@@ -20,6 +20,7 @@ public class BehaviourManureDispenser implements DispenseItemBehavior {
 	}
 
 	@Override
+	@SuppressWarnings("deprecation")
 	public @NotNull ItemStack dispense(BlockSource source, @NotNull ItemStack itemstack) {
 		Level world = source.level();
 		if (world.isClientSide()) {
