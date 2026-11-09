@@ -21,6 +21,7 @@ import java.util.*;
 
 public class Util {
 	public static List<EntityType<?>> manureAnimals = new ArrayList<EntityType<?>>();
+	public static HashMap<Animal, Integer> earliestDropTicks = new HashMap<>();
 
 	public static void attemptBlacklistProcessing(Level level) {
 		if (!Variables.processedBlacklist) {
@@ -31,6 +32,32 @@ public class Util {
 				Constants.logger.warn("[" + Reference.NAME + "] Unable to generate the list of manure animals.");
 			}
 		}
+	}
+
+	public static boolean isDueToDropManure(Animal animal, int currentTick, boolean isSharedDropTick) {
+		if (!ConfigHandler.randomizeDropTimingPerAnimal) {
+			return isSharedDropTick;
+		}
+
+		Integer earliestDropTick = earliestDropTicks.get(animal);
+		if (earliestDropTick != null && currentTick < earliestDropTick) {
+			return false;
+		}
+
+		return animal.getRandom().nextInt(getRandomDropTicks()) == 0;
+	}
+
+	public static void startDropCooldown(Animal animal, int currentTick) {
+		earliestDropTicks.put(animal, currentTick + ConfigHandler.minimumTicksBetweenDrops);
+	}
+
+	public static int getRandomDropTicks() {
+		int randomDropTicks = ConfigHandler.manureDropDelayTicks - ConfigHandler.minimumTicksBetweenDrops;
+		return Math.max(1, randomDropTicks);
+	}
+
+	public static boolean hasEatenSinceLastDrop(Animal animal) {
+		return animal.entityTags().contains(Reference.MOD_ID + ".ate");
 	}
 
 	public static boolean isBlacklistedAnimal(Animal animal) {
@@ -58,12 +85,21 @@ public class Util {
 			}
 
 			EntityType<?> entityType = entityTypeOptionalReference.get().value();
-			Entity entity = entityType.create(level, EntitySpawnReason.COMMAND);
-			if (entity instanceof Animal) {
+			if (isAnimalEntityType(level, entityType)) {
 				animals.add(entityType);
 			}
 		}
 
 		manureAnimals = animals;
+	}
+
+	public static boolean isAnimalEntityType(Level level, EntityType<?> entityType) {
+		try {
+			Entity entity = entityType.create(level, EntitySpawnReason.COMMAND);
+			return entity instanceof Animal;
+		}
+		catch (Exception ignored) {
+			return false;
+		}
 	}
 }

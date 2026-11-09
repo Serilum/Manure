@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "manure",
-  "version": "4.2",
+  "version": "5.0",
 
   "name": "Manure",
   "description": "Animals periodically drop manure, by default twice a day. Can be used as a bone meal substitute.",
@@ -17,13 +17,14 @@
 
   "environment": "*",
   "entrypoints": { "main": [ "com.serilum.manure.ModFabric" ], "modmenu": [ "com.serilum.manure.fabric.config.IntegrateModMenu" ] },
+  "mixins": [ "manure.mixins.json" ],
 
   "depends": {
     "fabricloader": ">=0.18.0",
     "fabric-api": "*",
     "minecraft": ">=26.1",
     "java": ">=25",
-    "collective": ">=8.84"
+    "collective": ">=8.85"
   },
 
   "custom": {
