@@ -2,6 +2,7 @@ package com.serilum.manure;
 
 import com.natamus.collective.functions.CreativeModeTabFunctions;
 import com.natamus.collective.services.Services;
+import com.natamus.collective.translations.ServerTranslationPack;
 import com.serilum.manure.config.ConfigHandler;
 import com.serilum.manure.dispenser.RecipeManager;
 import com.serilum.manure.items.ManureItems;
@@ -14,6 +15,7 @@ import net.minecraft.world.item.Item;
 public class ModCommon {
 
 	public static void init() {
+		ServerTranslationPack.requireClientTranslations(Reference.NAME);
 		ConfigHandler.initConfig();
 		load();
 	}

@@ -4,7 +4,9 @@
   "package": "com.serilum.manure.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
-
+    "AbstractHorseMixin",
+    "AnimalMixin",
+    "MobMixin"
   ],
   "client": [
   

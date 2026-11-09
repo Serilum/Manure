@@ -6,7 +6,7 @@ logoFile="icon.png"
 
 [[mods]]
 modId="manure"
-version="4.2"
+version="5.0"
 displayName="Manure"
 displayURL="https://serilum.com/mod/manure"
 authors="Serilum"
@@ -22,7 +22,7 @@ If you would like to contribute too, check out https://serilum.com/donate Apprec
 [[dependencies.manure]]
     modId="collective"
     type="required"
-    versionRange="[8.84,)"
+    versionRange="[8.85,)"
     ordering="NONE"
     side="BOTH"
 
